@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/static/css/lg.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to <span>Encrypt</span></h1>
+        <form action="/login" method="POST">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Sign In</button>
+
+            <div class="register-link">
+                <p>No account? <a href="/register">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

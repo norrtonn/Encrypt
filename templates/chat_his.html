@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat History</title>
+    <link rel="stylesheet" href="/static/css/chat_his.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to <span>Ncrypt</span></h1>
+            <a href="/logout" class="logout-btn">Log Out</a>
+        </header>
+        <div class="chat-container">
+            <div class="user-list">
+                <h2>Users</h2>
+                <ul>
+                    {% for user in users %}
+                        <li><a href="?receiver_id={{ user.id }}">{{ user.username }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="chat-box">
+                <h2>Messages</h2>
+                <div class="messages">
+                    {% for message in messages %}
+                        <p><strong>{{ message.sender_id }}</strong>: {{ message.content }}</p>
+                    {% endfor %}
+                </div>
+                <form action="/chat" method="POST">
+                    <textarea name="content" placeholder="Type your message..." required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

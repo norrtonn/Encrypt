@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/css/reg.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Join <span>Encrypt</span></h1>
+        <form action="/register" method="POST">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Choose a strong password" required>
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat your password" required>
+
+            <button type="submit">Sign Up</button>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="/login">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
